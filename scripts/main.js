@@ -24,7 +24,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.innerHTML  = 'Mozilla is cool, ' + storedName;
+  myHeading.innerHTML  = 'Открываем спутник Сатурна друг  ' + storedName;
 }
 myButton.onclick = function() {
   setUserName();
