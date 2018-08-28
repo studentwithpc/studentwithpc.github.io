@@ -7,7 +7,9 @@ vocabulary = {"кот":"cat",
 };
 mykeys = Object.keys(vocabulary); 
 var ruButton = document.getElementById('ru'),
-engButton = document.getElementById('eng');
+engButton = document.getElementById('eng'),
+engField = document.getElementById('engtext'),
+ruField = document.getElementById('rutext');
 
 RuToEng_f = function(text)
 { var ans = 'слово не найдено';
@@ -29,14 +31,16 @@ EngToRu_f = function(text)
 }
 
 engButton.onclick = function() {
-	var ruKey = document.getElementById("rutext").value;
-	document.getElementById("engtext").value=RuToEng_f(ruKey);
-
+	engField.value=RuToEng_f(ruField.value);
+ engField.style.border  = '2px solid blue';
+	ruField.style.border  = '1px solid black';
+	
 }
 
 ruButton.onclick = function() {
 
-	var engKey = document.getElementById("engtext").value;
-	document.getElementById("rutext").value =EngToRu_f(engKey);
+	ruField.value =EngToRu_f(engField.value);
+	ruField.style.border  = '2px solid blue';
+	engField.style.border  = '1px solid black';
 
 }

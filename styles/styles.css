@@ -20,10 +20,15 @@ button
 input[type=text]{
 width:199px;
 height:70px;
+border: 1px solid blue;
 }
 
- input[type=text]:change
- {
-  
-  background: #87CEEB;
- }
+#eng:hover
+{
+	background-color: #00BFFF;
+}
+#ru:hover
+{
+	background-color: #00BFFF;
+}
+{
