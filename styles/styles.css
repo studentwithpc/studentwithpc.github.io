@@ -3,29 +3,27 @@ html {
   font-family: placeholder: здесь должно быть имя шрифта из Google fonts;
  background-color: #E0FFFF;
 }
-h1 {
-  font-size: 40px;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0;    
-  color: #00539F;
+body
+{
+	margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+	text-align: center
+}
+
+button
+{
+	 margin: auto;
+	 width:200px;
+     height:30px;
+}
+input[type=text]{
+width:199px;
+height:70px;
+}
+
+ input[type=text]:change
+ {
   
-}
-p, li {
-	
-  font-size: 30px;    
-  line-height: 2;
-  letter-spacing: 1px;
-}
-body {
-  width: 800px;
-  margin: 0 auto;
-  padding: 0 10px 10px 10px;
-  border: 5px solid black;
-}
-img {
-  display: block;
-  margin: 0 auto;
-  width: 40%;
-  height: auto;
-}
+  background: #87CEEB;
+ }
