@@ -3,12 +3,37 @@ html {
   font-family: placeholder: здесь должно быть имя шрифта из Google fonts;
  background-color: #E0FFFF;
 }
-body
+
+.pole
 {
-	margin-left: auto;
-    margin-right: auto;
-    width: 10em;
-	text-align: center
+	width: 1000px;
+    height: 160px;
+    margin: 0 auto;
+    text-align: center;
+	position: relative;
+	top: 70px;
+	background-color: #AFEEEE;
+	border: 2px outset #4682B4;
+}
+.mytext
+{
+	 display: inline-block;
+        line-height: 20px;
+        font-size: 20px;
+        width: 320px; 
+        text-align: center; 
+		margin: 0 auto;
+    position: relative;
+}
+#butt
+{
+	display: inline-block;
+    line-height: 20px;
+    width: 320px; 
+    text-align: center; 
+	margin: 0 auto;
+    position: relative;
+	top: -40px;
 }
 
 button
@@ -17,12 +42,18 @@ button
 	 width:200px;
      height:30px;
 }
-input[type=text]{
-width:199px;
-height:70px;
-border: 1px solid blue;
+textarea
+{
+	font-size: 20px;
+	resize: none;
+	height: 150px;
 }
-
+h1
+{
+	margin: auto;
+	font-size: 30px;
+	text-align: center; 
+}
 #eng:hover
 {
 	background-color: #00BFFF;

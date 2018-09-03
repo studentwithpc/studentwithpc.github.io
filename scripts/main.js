@@ -1,4 +1,4 @@
-
+// не работает в IE
 vocabulary = {"кот":"cat",
 "объект":"object",
 "форма":"form",
@@ -12,7 +12,7 @@ engField = document.getElementById('engtext'),
 ruField = document.getElementById('rutext');
 
 RuToEng_f = function(text)
-{ var ans = 'слово не найдено';
+{ var ans = 'word not found';
 for(key in vocabulary)
 {
 	if(text === key)
@@ -21,7 +21,7 @@ for(key in vocabulary)
 	return ans;}
 
 EngToRu_f = function(text)
-{ var ans = 'word not found';
+{ var ans = 'слово не найдено';
 	for(var i =0; i<mykeys.length; i++)
 	{
 		if(vocabulary[mykeys[i]] === text) 
