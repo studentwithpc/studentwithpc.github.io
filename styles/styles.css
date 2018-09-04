@@ -11,16 +11,27 @@ html {
     margin: 0 auto;
     text-align: center;
 	position: relative;
-	top: 70px;
-	background-color: #AFEEEE;
-	border: 2px outset #4682B4;
+	margin-top: 15px
+}
+#addpole
+{
+    height: 100px;
+}
+#statpole
+{
+	 height: 50px;
+}
+hr{top: 70px;}
+input
+{
+	width: 200px;
 }
 .mytext
 {
 	 display: inline-block;
         line-height: 20px;
         font-size: 20px;
-        width: 320px; 
+        width: 330px; 
         text-align: center; 
 		margin: 0 auto;
     position: relative;
@@ -54,6 +65,17 @@ h1
 	font-size: 30px;
 	text-align: center; 
 }
+h2
+{
+	margin: auto;
+	font-size: 20px;
+	text-align: center; 
+}
+p
+{
+	display: inline-block;
+	font-size: 15px;
+}
 #eng:hover
 {
 	background-color: #00BFFF;
@@ -62,4 +84,7 @@ h1
 {
 	background-color: #00BFFF;
 }
+#addword:hover
 {
+	background-color: #00BFFF;
+}
