@@ -7,89 +7,91 @@ const vocabulary = {
   'код': 'code'
 // ... end demo
 }
-const mykeys = Object.keys(vocabulary)
-let trcount = 0
-let ruButton = document.getElementById('ru')
-let engButton = document.getElementById('eng')
-let engField = document.getElementById('engtext')
-let ruField = document.getElementById('rutext')
-let addButton = document.getElementById('addword')
-let newRuWord = document.getElementById('ruinp')
-let newEngWord = document.getElementById('enginp')
-let myVocCount = document.getElementById('statvar')
-let myTransCount = document.getElementById('statcol')
-let myTime = document.getElementById('stattime')
+const myKeys = Object.keys(vocabulary)
+const ruAns = 'word not found'
+const engAns = 'слово не найдено'
+let trCount = 0
+const ruButton = document.getElementById('ru')
+const engButton = document.getElementById('eng')
+const engField = document.getElementById('engtext')
+const ruField = document.getElementById('rutext')
+const addButton = document.getElementById('addword')
+const newRuWord = document.getElementById('ruinp')
+const newEngWord = document.getElementById('enginp')
+const myVocCount = document.getElementById('statvar')
+const myTransCount = document.getElementById('statcol')
+const myTime = document.getElementById('stattime')
 
-function RuToEngF (text) {
-  let ans = 'word not found'
+function ruToEng (text) {
+  let ans = ruAns
   for (let key in vocabulary) {
     if (text === key) {
       ans = vocabulary[key]
+      break
     }
   }
   return ans
 }
 
-function EngToRuF (text) {
-  let ans = 'слово не найдено'
-  for (let i = 0; i < mykeys.length; i++) {
-    if (vocabulary[mykeys[i]] === text) {
-      ans = mykeys[i]
+function engToRu (text) {
+  let ans = engAns
+  for (let i = 0; i < myKeys.length; i++) {
+    if (vocabulary[myKeys[i]] === text) {
+      ans = myKeys[i]
+      break
     }
   }
   return ans
 }
-function AddNewWord (key1,
+function addNewWord (key1,
   text2) {
-  let keyUsed = RuToEngF(key1)
-  let textUsed = EngToRuF(text2)
+  const keyUsed = ruToEng(key1)
+  const textUsed = engToRu(text2)
   if (key1 !== '' && text2 !== '') {
     // не портить существующее
-    if (keyUsed === 'word not found' && textUsed === 'слово не найдено') {
+    if (keyUsed === ruAns && textUsed === engAns) {
       vocabulary[key1] = text2
-      mykeys.push(key1)
+      myKeys.push(key1)
     } else {
       alert('Слово уже добавлено в словарь!!!')
     }
   } else {
     alert('Вы не ввели одно из слов!!!')
   }
-  console.log(vocabulary, mykeys)
+  console.log(vocabulary, myKeys)
 }
 
 engButton.onclick = function () {
-  engField.value = RuToEngF(ruField.value)
+  engField.value = ruToEng(ruField.value)
   engField.style.border = '2px solid blue'
   ruField.style.border = '1px solid black'
-  SetVocabularyCount()
-  SetTranslationCount()
-  SetTime()
+  setVocabularyCount()
+  setTranslationCount()
+  setTime()
 }
 
 ruButton.onclick = function () {
-  ruField.value = EngToRuF(engField.value)
+  ruField.value = engToRu(engField.value)
   ruField.style.border = '2px solid blue'
   engField.style.border = '1px solid black'
-  SetVocabularyCount()
-  SetTranslationCount()
-  SetTime()
+  setVocabularyCount()
+  setTranslationCount()
+  setTime()
 }
 addButton.onclick = function () {
-  AddNewWord(newRuWord.value.replace(/[\s]+/g, ''),
+  addNewWord(newRuWord.value.replace(/[\s]+/g, ''),
     newEngWord.value.replace(/[\s]+/g, ''))
-  SetVocabularyCount()
-  // SetTranslationCount()
-  SetTime()
+  setVocabularyCount()
+  // setTranslationCount()
+  setTime()
 }
 
-function SetVocabularyCount () {
-  let count = mykeys.length
-  myVocCount.innerHTML = count
+function setVocabularyCount () {
+  myVocCount.innerHTML = myKeys.length
 }
-function SetTranslationCount () {
-  trcount++
-  myTransCount.innerHTML = trcount
+function setTranslationCount () {
+  myTransCount.innerHTML = ++trCount
 }
-function SetTime () {
+function setTime () {
   myTime.innerHTML = new Date()
 }
