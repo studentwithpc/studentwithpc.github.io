@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Изучение JS</title>
+    <title>Переводчик</title>
 	<link href="styles/styles.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
- 
   <body>
   <h1>Русско-Английский переводчик</h1>
  <div class="pole">
@@ -43,8 +41,18 @@
 	</div>
 	 <hr>
 	 <div class="pole" id ="statpole">
-	 <p>Слов в словаре: <output id="statvar">4</output> Запросов на перевод: <output id="statcol">0</output>
-	 Время последнего запроса:  <output id="stattime">0</output></p>
+	 <table>
+	 <tr>
+	 <th>Слов в словаре: </th>
+	 <th width =30%>Запросов на перевод:</th>
+	 <th>Время последнего запроса:</th>
+	 </tr>
+	 <tr>
+	 <td><output id="statvar">4</output></td>
+	 <td><output id="statcol">0</output> </td>
+	 <td> <output id="stattime">0</output></td>
+	   </tr>
+	 </table>
 	</div>
   <script src="scripts/main.js"></script> 
   

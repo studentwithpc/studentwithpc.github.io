@@ -1,7 +1,7 @@
 html {
   font-size: 10px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
-  font-family: placeholder: здесь должно быть имя шрифта из Google fonts;
- background-color: #E0FFFF;
+  
+background-image: url('../images/pic3.jpg');  
 }
 
 .pole
@@ -11,7 +11,8 @@ html {
     margin: 0 auto;
     text-align: center;
 	position: relative;
-	margin-top: 15px
+	margin-top: 15px;
+	/*background-color: #E0FFFF;*/
 }
 #addpole
 {
@@ -20,6 +21,7 @@ html {
 #statpole
 {
 	 height: 50px;
+	 
 }
 hr{top: 70px;}
 input
@@ -52,6 +54,10 @@ button
 	 margin: auto;
 	 width:200px;
      height:30px;
+	 border-radius: 15px;
+	 background: #87CEEB;
+	/* background-image: url('../images/icon.svg');*/
+	font-family: 'Verdana';
 }
 textarea
 {
@@ -85,6 +91,26 @@ p
 	background-color: #00BFFF;
 }
 #addword:hover
+{
+	background-color: #00BFFF;
+}
+table
+{
+	display: inline-block;
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+th,tr,td {
+	font-size: 15px;
+	border: 1px solid white;
+	background-color: #AFEEEE
+	}
+th
+{
+	 
+	background: #87CEEB;
+}
+td:hover
 {
 	background-color: #00BFFF;
 }

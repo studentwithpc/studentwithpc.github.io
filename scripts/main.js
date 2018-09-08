@@ -93,5 +93,12 @@ function setTranslationCount () {
   myTransCount.innerHTML = ++trCount
 }
 function setTime () {
-  myTime.innerHTML = new Date()
+	const timeNow = new Date().toLocaleString('ru', {
+       day: 'numeric',
+       month: 'long',
+       year: 'numeric',
+	   hour:  'numeric',
+	   minute: 'numeric'
+      });
+  myTime.innerHTML = timeNow.replace(' г.', '')
 }
