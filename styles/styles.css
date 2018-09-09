@@ -90,10 +90,6 @@ p
 {
 	background-color: #00BFFF;
 }
-#eng:active ~ #engtext
-{
-	background-color: #00BFFF;
-}
 #addword
 {
     width:115px;	
