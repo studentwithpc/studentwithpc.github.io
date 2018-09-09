@@ -72,8 +72,8 @@ engButton.onclick = function () {
 
 ruButton.onclick = function () {
   ruField.value = engToRu(engField.value)
-  ruField.style.border = '2px solid blue'    // problem
-  engField.style.border = '1px solid black'  // problem
+  ruField.style.border = '2px solid blue' // problem
+  engField.style.border = '1px solid black' // problem
   setVocabularyCount()
   setTranslationCount()
   setTime()
@@ -93,12 +93,12 @@ function setTranslationCount () {
   myTransCount.innerHTML = ++trCount
 }
 function setTime () {
-	const timeNow = new Date().toLocaleString('ru', {
+  const timeNow = new Date().toLocaleString('ru', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
-	  hour: 'numeric',
-	  minute: 'numeric'
+    hour: 'numeric',
+    minute: 'numeric'
   })
   myTime.innerHTML = timeNow.replace(' г.', '')
 }
