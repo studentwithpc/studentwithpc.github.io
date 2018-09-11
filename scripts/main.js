@@ -63,8 +63,8 @@ function addNewWord (key1,
 
 engButton.onclick = function () {
   engField.value = ruToEng(ruField.value)
-  engField.style.border = '2px solid blue' // problem
-  ruField.style.border = '1px solid black' // problem
+  engField.classList.add('activeText')
+  ruField.classList.remove('activeText')
   setVocabularyCount()
   setTranslationCount()
   setTime()
@@ -72,8 +72,8 @@ engButton.onclick = function () {
 
 ruButton.onclick = function () {
   ruField.value = engToRu(engField.value)
-  ruField.style.border = '2px solid blue' // problem
-  engField.style.border = '1px solid black' // problem
+  ruField.classList.add('activeText')
+  engField.classList.remove('activeText')
   setVocabularyCount()
   setTranslationCount()
   setTime()
