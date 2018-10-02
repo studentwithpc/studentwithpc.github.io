@@ -1,13 +1,12 @@
 'use strict'
 
-const vocabulary = {
-  'кот': 'cat',
-  'объект': 'object',
-  'форма': 'form',
-  'код': 'code'
-// ... end demo
+const myVocabulary = {
+  "кот": "cat",
+  "объект": "object",
+  "форма": "form",
+  "код": "code"
 }
-const myKeys = Object.keys(vocabulary)
+const myKeys = Object.keys(myVocabulary)
 const ruAns = 'word not found'
 const engAns = 'слово не найдено'
 let trCount = 0
@@ -24,9 +23,9 @@ const myTime = document.getElementById('stattime')
 
 function ruToEng (text) {
   let ans = ruAns
-  for (let key in vocabulary) {
+  for (let key in myVocabulary) {
     if (text === key) {
-      ans = vocabulary[key]
+      ans = myVocabulary[key]
       break
     }
   }
@@ -36,7 +35,7 @@ function ruToEng (text) {
 function engToRu (text) {
   let ans = engAns
   for (let i = 0; i < myKeys.length; i++) {
-    if (vocabulary[myKeys[i]] === text) {
+    if (myVocabulary[myKeys[i]] === text) {
       ans = myKeys[i]
       break
     }
@@ -50,7 +49,7 @@ function addNewWord (key1,
   if (key1 !== '' && text2 !== '') {
     // не портить существующее
     if (keyUsed === ruAns && textUsed === engAns) {
-      vocabulary[key1] = text2
+      myVocabulary[key1] = text2
       myKeys.push(key1)
     } else {
       alert('Слово уже добавлено в словарь!!!')
@@ -58,7 +57,7 @@ function addNewWord (key1,
   } else {
     alert('Вы не ввели одно из слов!!!')
   }
-  console.log(vocabulary, myKeys)
+  console.log(ocabulary, myKeys)
 }
 
 engButton.onclick = function () {
