@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<title>Переводчик</title>
+	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <h1>Русско-Английский переводчик</h1>
+ <div class="pole">
+ 
+  <div class="mytext" id = "rudiv">
+    
+    <textarea  id ="rutext"  	>Введите текст на русском</textarea>
+	
+	</div>
+	<div id="butt">
+	<button class="but" id="eng">Перевести на английский   <img src="images/icon-r.svg" ></button>
+	<button class="but" id="ru"><img src="images/icon-l.svg" >    Перевести на русский</button>
+	</div>
+	<div class="mytext" id = "engdiv">
+	
+	<textarea  id = "engtext" >Введите текст на английском</textarea>
+   
+	</div>
+	</div>
+	 <hr>
+	 <h2>Добавьте новое слово</h2>
+	<div class="pole" id="addpole">
+	 <div class="mytext" >
+    <p>Введите русское слово: </p>
+   <input type="text" id ="ruinp"></input>
+	
+	</div>
+	 <div class="mytext" >
+    <p>Введите английское слово: </p>
+    <input type="text" id ="enginp"></input>
+	
+	</div>
+	<button class="but" id="addword"><img src="images/icon.svg" >  Добавить</button>
+	</div>
+	 <hr>
+	 <div class="pole" id ="statpole">
+	 <table>
+	 <tr>
+	 <th>Слов в словаре: </th>
+	 <th width =30%>Запросов на перевод:</th>
+	 <th>Время последнего запроса:</th>
+	 </tr>
+	 <tr>
+	 <td><output id="statvar">4</output></td>
+	 <td><output id="statcol">0</output> </td>
+	 <td> <output id="stattime">0</output></td>
+	   </tr>
+	 </table>
+	</div>
+  <script src="scripts/main.js"></script>
+  
+  </body>
+ 
+</html>
